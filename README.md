@@ -2,7 +2,7 @@
 
 A personal website and blog for Martin Guzman, a Cyber Threat Intelligence Analyst.
 
-Built with Gatsby.js 3.0 gatsby-starter-hello-world.
+Built with Gatsby.js 3.0 from the gatsby-starter-hello-world.
 https://github.com/gatsbyjs/gatsby-starter-hello-world
 
 The site is responsive with fluid typography and UI Elements designed and selected to improve accessibility.
