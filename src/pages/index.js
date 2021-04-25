@@ -1,8 +1,18 @@
-import React from 'react';
+// Import React and Gatsby ELements
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
-const Home = (props) => {
+// Import Components
+import Layout from '../components/layout';
+import AllPosts from '../components/allPosts';
+
+const Home = () => {
+
  	return (
-   	<div>Home Page</div>
+   	<Layout>
+	   	<h1>Home</h1>
+	   	<AllPosts />
+   	</Layout>
  	)
 }
 
