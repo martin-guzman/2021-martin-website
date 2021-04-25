@@ -37,17 +37,14 @@ const PostTemplate = ({ data }) => {
 	      image={pathToImageHero}
 	      alt={data.contentfulPost.image.title}
       />
-<React.Fragment>
-{tags.map((tag, index) => {
-                  const slug = slugify(tag, { lower: true })
-
-                  return (
-                    <Link to={`/tags/${slug}`} key={index}>
-                      {tag}
-                    </Link>
+      <React.Fragment>
+        {tags.map((tag, index) => {
+          const slug = slugify(tag, { lower: true })
+          return (
+            <Link to={`/tags/${slug}`} key={index}>{tag}</Link>
                   )
-                })}
-</React.Fragment>
+          })}
+      </React.Fragment>
    		<React.Fragment>
    			{output}
    		</React.Fragment>
