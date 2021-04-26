@@ -1,19 +1,22 @@
 // Import React and Gatsby ELements
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+
+// Import Utilities and Style Elements
 
 // Import Components
-import Layout from '../components/layout';
-import AllPosts from '../components/allPosts';
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import AllPosts from '../components/allPosts'
 
-const Home = () => {
+const Home = ({ data, location }) => {
 
  	return (
-   	<Layout>
+   	<Layout location={location}>
+   		<SEO title="Home" />
 	   	<h1>Home</h1>
 	   	<AllPosts />
    	</Layout>
  	)
 }
 
-export default Home;
+export default Home

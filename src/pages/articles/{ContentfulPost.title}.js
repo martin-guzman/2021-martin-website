@@ -10,9 +10,10 @@ import { Options } from '@contentful/rich-text-react-renderer'
 import slugify from 'slugify'
 
 // Import Components
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, location }) => {
 
 	const { title, content, image } = data.contentfulPost
 	const pathToImageHero = getImage(image)
@@ -31,7 +32,8 @@ const PostTemplate = ({ data }) => {
   const output = renderRichText(post, options)
 
  	return (
-   	<Layout>
+   	<Layout location={location}>
+      <SEO title={title} />
 	   	<h1>{title}</h1>
 			<GatsbyImage
 	      image={pathToImageHero}
@@ -84,29 +86,3 @@ export const query = graphql`
 `
 
 export default PostTemplate
-
-// import AllPosts from '../components/allPosts'
-//<GatsbyImage src={post.references.fixed.src} alt="cybersecurtiy" />
-
-// 
-//       const options = {
-//         renderNode: {
-//           [BLOCKS.EMBEDDED_ASSET]: post => {
-//             console.log(post)
-// 
-//             return (
-//               <>
-//                 <h2>Embedded Asset</h2>
-//                 <GatsbyImage image={pathToImage} />
-//               </>
-//             )
-//           }
-//         }
-//       }
-
-
-// import {
-//   ContentfulRichTextGatsbyReference,
-//   renderRichText,
-//   RenderRichTextData,
-// } from 'gatsby-source-contentful/rich-text'

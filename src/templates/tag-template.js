@@ -7,18 +7,16 @@ import { graphql } from 'gatsby'
 
 // Import Components
 import Layout from '../components/layout'
-
-
-
-
+import SEO from '../components/seo'
 import PostList from "../components/postList"
 
 
-const TagTemplate = ({ data, pageContext }) => {
+const TagTemplate = ({ data, pageContext, location, title }) => {
   const posts = data.allContentfulPost.nodes
   return (
-    <Layout>
-      <main className="page">
+    <Layout location={location} >
+    <SEO title={`Article Tag: ${pageContext.tag}`} />
+      <main>
         <h2>{pageContext.tag}</h2>
         <div>
           <PostList posts={posts} />

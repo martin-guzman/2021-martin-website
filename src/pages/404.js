@@ -1,9 +1,20 @@
-import React from 'react';
+// Import React and Gatsby
+import React from 'react'
 
-const Error = (props) => {
+// Import Utilities and Style Elements
+
+// Import Components
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+
+
+const Error = ({ data, location }) => {
   return (
-    <div>404 Error Page</div>
+    <Layout location={location}>
+			<SEO title="404 Error" />
+			<h1>About</h1>
+    </Layout>
   )
 }
 
-export default Error;
+export default Error

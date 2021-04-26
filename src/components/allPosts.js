@@ -33,13 +33,7 @@ const AllPosts = () => {
   } = useStaticQuery(query)
 
   return (
-    <div>
-    	<h1>All Posts</h1>
-    	<h2>Tag List:</h2>
-    	<TagList posts={posts} />
-    	<h2>Post List:</h2>
-    	<PostList posts={posts} />
-    </div>
+    <div><PostList posts={posts} /></div>
   )
 }
 

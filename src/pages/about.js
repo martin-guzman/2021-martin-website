@@ -1,9 +1,20 @@
-import React from 'react';
+// Import React and Gatsby
+import React from 'react'
 
-const About = () => {
+// Import Utilities and Style Elements
+
+// Import Components
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+
+
+const About = ({ location }) => {
   return (
-    <div>About Page</div>
+    <Layout location={location}>
+			<SEO title="About" />
+			<h1>About</h1>
+    </Layout>
   )
 }
 
-export default About;
+export default About

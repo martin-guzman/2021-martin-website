@@ -8,16 +8,15 @@ import slugify from 'slugify'
 
 const PostList = ({ posts = [] }) => {
   return (
-
     <div>
-    	{posts.map((post) => {
+        {posts.map((post) => {
 
     		const { id, title, image } = post
     		const pathToImage = getImage(image)
     		const slug = slugify(title, { lower: true })
 
     	  return (
-    	  	<Link key={id} to={`/${slug}`} >
+    	  	<Link key={id} to={`/articles/${slug}`} >
     	  		<h4>{title}</h4>
     	  		<GatsbyImage 
     	  			image={pathToImage} 
